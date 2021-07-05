@@ -14,10 +14,9 @@
   "devDependencies": {},
   "scripts": {
     "start": "node main.js",
-    "heroku-postbuild": "cd serves && npm install && npm run build",
+    "heroku-postbuild": "cd servesup && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "engine": {
     "node": "14.17.0"
   },
