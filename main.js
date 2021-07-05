@@ -13,11 +13,11 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true,}));
 app.use(cors());
 
-app.use('/menuItems', require('./menuItems.js'));
-app.use('/productCategories', require('./productCategories.js'));
-app.use('/carts', require('./carts.js'));
-app.use('/cartItems', require('./cartItems.js'));
-app.use('/payments', require('./payments.js'));
+app.use('/api/menuItems', require('./menuItems.js'));
+app.use('/api/productCategories', require('./productCategories.js'));
+app.use('/api/carts', require('./carts.js'));
+app.use('/api/cartItems', require('./cartItems.js'));
+app.use('/api/payments', require('./payments.js'));
 
 
 app.use(express.static(path.join(__dirname, '/servesup/build')));
