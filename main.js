@@ -7,12 +7,13 @@ const cors = require('cors');
 const bodyParser = require('body-parser');  // don't need? bodyparser is depracated
 const mysql = require('mysql');    // don't need because in dbcon.js file
 const path = require('path');
-app.use(express.static(path.resolve(__dirname, '/servesup/build')));
-
+app.use(express.static(path.join(__dirname, '/servesup/build')));
+app.use(express.static('public'));
 /*To handle routing*/
 app.get('/*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '/servesup/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '/servesup/build', 'index.html'));
 });
+
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true,}));
